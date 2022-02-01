@@ -1,0 +1,110 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color:rgba(0, 0, 0, 0.8) ;
+    color:rgba(255, 248, 220, 0.849);
+font-family: 'Poppins', sans-serif;
+font-size: 1.1rem;
+}
+ .contant {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.contant  input{
+    width: 100%;
+    margin: 10px 0px;
+    height:40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.contant .inputeTotle{
+display: flex;
+align-content: space-between;
+
+
+}
+.inputeTotle input{
+    width: 25% !important;
+    margin-right: 10px;
+  
+}
+
+.inputeTotle p{
+    margin-top:10px ;
+   background-color: rgb(33, 122, 182); 
+    padding: 5px;
+    border-radius: 5px;
+
+    
+}
+
+.contant #creat{
+    background-color:  rgb(33, 122, 182);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: #ffff;
+}
+
+.contant #creat:focus{
+
+   transform: scale(1.1);
+}
+
+ #searchName,#searchCat{
+    background-color:  rgb(33, 122, 182);
+    border: none;
+    border-radius: 10px;
+    color:rgba(255, 248, 220, 0.849);
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+
+}
+
+
+#searchName:hover,#searchCat:hover{
+
+    
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color:rgba(255, 248, 220, 0.849);
+    margin:10px 0px;
+    
+  
+}
+
+table tbody td #update{
+    background-color:  rgb(33, 122, 182);
+    border: none;
+    border-radius: 10px;
+    color:rgba(255, 248, 220, 0.849);
+    font-size: 1rem;
+    padding: 5px;
+}
+
+table tbody td #delete{
+    background-color:  rgb(254, 254, 255);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+ #update:hover,#delete:hover{
+
+    transform: scale(1.1);
+}
+
+
