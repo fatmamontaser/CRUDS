@@ -8,7 +8,8 @@ let countcinput=document.getElementById("count");
 let categinput=document.getElementById("categ");
 let searchinput=document.getElementById("search");
 let creat =document.getElementById("creat");
-
+ let mood ="create";
+ let indexGlo = '';
 let addData ;
 if(localStorage.getItem("list") ==null){
      addData =[];
@@ -48,7 +49,11 @@ if(priceinput.value !=''){
             categry:categinput.value.toLowerCase(),
         
         }
+       
+       
         if(nameinput.value!=''&&priceinput.value!=''){
+       
+       if(mood==="create"){
         if(adds.count > 1){
             for(let i=0;i<adds.count;i++){
                 addData.push(adds);
@@ -56,6 +61,14 @@ if(priceinput.value !=''){
         }else{
             addData.push(adds);
         }
+       }else{
+
+        addData[indexGlo]=adds;
+        mood="create";
+        creat.innerHTML="create"
+        countcinput.style.display='block'
+       }
+   
         
         localStorage.setItem("list",JSON.stringify(addData))
         console.log(addData)
@@ -119,27 +132,15 @@ function updateData(i){
     taxinput.value =addData[i].taxes,
     adsinput.value =addData[i].adds,
     discinput.value =addData[i].discount,
+    getTotal()
     countcinput.style.display='none'
     categinput.value =addData[i].categry,
     creat.innerHTML = 'Update'
-
-    creat.setAttribute("onclick",`newUpdate(${i})`)
+   mood ="update"
+   indexGlo =i;
+    
 }
 
-function newUpdate(i){
-    addData[i].name =  nameinput.value,
-    addData[i].price =  priceinput.value,
-    addData[i].taxes =  taxinput.value,
-    addData[i].adds =  adsinput.value,
-    addData[i].discount= discinput.value,
-    countcinput.style.display='flex'
-    addData[i].categry = categinput.value 
-    showData();
-    clearFor();
-    localStorage.setItem("list",JSON.stringify(addData))
-    creat.innerHTML = 'create'
-    creat.setAttribute("onclick",`updateData(${i})`)
-}
 
 // search
 
